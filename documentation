@@ -1,0 +1,31 @@
+WebAR -- html code  
+libraries- A-frame(library for building 3D/VR scenes)
+AR.js (adds camera based AR)--marker tracking
+
+AR.js connects 3D object to camera(user camera defined as an entity):
+  <a-entity camera></a-entity>
+
+HIRO marker defined:
+ <a-marker
+        preset="hiro"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+        smooth="true"
+        smoothCount="50"
+        smoothTolerance="0.1"
+        smoothThreshold="1000"
+      >
+
+Actual 3D object placed on the marker:
+  <a-entity
+          id="template-model"
+          obj-model="obj: #template-obj; mtl: #template-mtl"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="1 1 1"
+          class="clickable"
+          gesture-handler        
+        >
+        </a-entity>
